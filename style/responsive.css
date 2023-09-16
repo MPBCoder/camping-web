@@ -1,0 +1,48 @@
+@media (max-width: 380px) {
+	.header-content__title {
+		font-size: 4rem;
+	}
+	
+	.destinations__title {
+		font-size: 2.4rem;
+	}
+}
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+	.mobile-nav,
+	.header-top__show-more {
+		display: none;
+	}
+
+	.nav {
+		display: flex;
+	}
+}
+
+@media (min-width: 992px) {
+	.header-top__wrapper {
+		gap: 4rem;
+	}
+
+	.nav__login-btns {
+		display: flex;
+	}
+
+	.header-content__wrapper {
+		max-width: 50rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.nav__links {
+		gap: 3.5rem;
+	}
+
+}
+
+@media (min-width: 1400px) {
+}

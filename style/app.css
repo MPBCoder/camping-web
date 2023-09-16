@@ -1,0 +1,650 @@
+:root {
+	--orange: #e76f51;
+	--white: #fff;
+	--grey: #d2d2d2;
+	--black: #000;
+	--dark: #3b3735;
+	--app-bg: #faf4f2;
+	--primary-font: "Roboto", Arial, Helvetica, sans-serif;
+	--primary-font-md: "Roboto Medium", Arial, Helvetica, sans-serif;
+	--secondary-font: "Archivo Black", Arial, Helvetica, sans-serif;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /* 10px */
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: var(--primary-font);
+	line-height: 1.6;
+	font-size: 1.6rem;
+	background-color: var(--app-bg);
+}
+
+/* 
+
+!  -- Reset Styles --
+
+*/
+
+a {
+	text-decoration: none;
+}
+
+/* 
+
+!  -- Helper Classes --
+
+*/
+
+/* 
+
+!  -- Components --
+
+*/
+
+.btn {
+	display: block;
+	border-radius: 10rem;
+	font-family: var(--primary-font-md);
+	font-size: 1.8rem;
+	color: var(--white);
+	background-color: var(--dark);
+	width: 18rem;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+/* 
+
+!  -- App Styles --
+
+
+
+
+?  -- Header --
+
+
+*/
+
+.header {
+	background: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url("/files/images/header-bg.jpg") no-repeat center;
+	background-size: cover;
+	border-radius: 0 0 10rem 10rem;
+	min-height: 85vh;
+}
+
+/*
+
+===================
+?    Header top 
+===================
+
+*/
+
+.header-top {
+	color: var(--white);
+	padding: 2.5rem 0;
+}
+
+.header-top__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3rem;
+}
+
+/* 
+
+===================
+*      Logo
+===================
+
+*/
+
+.app-icon {
+	display: inline-block;
+	width: 5.5rem;
+	height: 5.5rem;
+	overflow: hidden;
+	cursor: pointer;
+	flex: 0 0 5.5rem;
+}
+
+.app-icon__logo {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/*
+
+===============================
+*    Navigation ( Desktop )
+===============================
+
+*/
+
+.nav {
+	display: none;
+	justify-content: space-between;
+	position: relative;
+	z-index: 0;
+	flex: auto;
+}
+
+/*
+
+=======================================
+*     Navigation Links ( Desktop )
+=======================================
+
+*/
+
+.nav__links {
+	display: flex;
+	justify-content: space-between;
+	gap: 2.4rem;
+	align-items: center;
+	text-align: center;
+}
+
+.nav__link-wrapper {
+}
+
+.nav__link {
+	color: var(--grey);
+	transition: color 100ms ease-in;
+}
+
+.nav__link:hover {
+	color: var(--white);
+}
+
+.nav__link-wrapper--active .nav__link {
+	color: var(--white);
+	position: relative;
+}
+
+.nav__link-wrapper--active .nav__link::after {
+	content: "";
+	position: absolute;
+	background-color: var(--orange);
+	height: 0.3rem;
+	width: 4rem;
+	top: calc(50% - 0.15rem);
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	border-radius: 5rem;
+	transform: rotate(45deg);
+	z-index: -1;
+}
+
+.nav__login-btns {
+	display: none;
+	align-items: center;
+	font-family: var(--primary-font-md);
+	align-items: center;
+}
+
+.nav__login-btn {
+	cursor: pointer;
+	height: 5.5rem;
+	flex: auto;
+	text-align: center;
+	margin-left: 1.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.nav__login-btn--border {
+	padding: 1rem 2.5rem;
+	border: 1px solid var(--white);
+	border-radius: 10rem;
+	transition: all 100ms ease-in 50ms;
+}
+
+.nav__login-btn--border:hover {
+	color: #343434;
+	background-color: var(--white);
+}
+
+/*
+
+=============================
+*  Mobile Navigation Menu
+=============================
+
+*/
+
+.mobile-nav {
+	display: block;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -25rem;
+	background-color: var(--dark);
+	color: var(--white);
+	width: 25rem;
+	padding: 2.5rem;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	gap: 3rem;
+	justify-content: flex-start;
+	transition: all 250ms ease-in;
+}
+
+.mobile-nav--open {
+	left: 0;
+}
+
+/*
+
+=================
+*  Mobile Title
+=================
+
+*/
+
+.mobile-nav__title {
+	color: var(--white);
+	text-align: center;
+	font-size: 2rem;
+	font-family: var(--secondary-font);
+	border-bottom: 1px solid var(--white);
+	padding-bottom: 1rem;
+}
+
+/*
+
+=============================
+*  Mobile Navigation Links
+=============================
+
+*/
+
+.mobile-nav__links {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.5rem;
+	width: 100%;
+}
+
+.mobile-nav__link-wrapper {
+}
+
+.mobile-nav__link {
+	color: var(--white);
+	transition: all 250ms ease-in-out 50ms;
+	position: relative;
+	display: block;
+}
+
+.mobile-nav__link:hover,
+.mobile-nav__link-wrapper--active .mobile-nav__link {
+	padding-left: 2.2rem;
+}
+
+.mobile-nav__link::before,
+.mobile-nav__link-wrapper--active .mobile-nav__link::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	height: 0.3rem;
+	width: 0;
+	border-radius: 5rem;
+	background-color: var(--orange);
+	transition: all 250ms ease-in-out 50ms;
+}
+.mobile-nav__link:hover::before,
+.mobile-nav__link-wrapper--active .mobile-nav__link::before {
+	width: 1.6rem;
+}
+
+/*
+
+=====================================
+*  Mobile Navigation Login Buttons
+=====================================
+
+*/
+
+.mobile-nav__login-btns {
+	display: flex;
+	width: 100%;
+	text-align: center;
+}
+
+.mobile-nav__login-btn {
+	padding: 1rem;
+	cursor: pointer;
+	flex: auto;
+	border: 1px solid var(--white);
+	transition: all 100ms ease-in 50ms;
+}
+
+.mobile-nav__login-btn:hover {
+	color: var(--dark);
+	background-color: var(--white);
+}
+
+/*
+
+===================
+* Show More Button
+===================
+
+*/
+
+.header-top__show-more {
+	width: 5.5rem;
+	height: 5.5rem;
+	background-color: var(--white);
+	border-radius: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.header-top__show-more-line,
+.header-top__show-more-line::after,
+.header-top__show-more-line::before {
+	display: block;
+	height: 0.3rem;
+	width: 3rem;
+	border-radius: 5rem;
+	background-color: var(--orange);
+	position: relative;
+	content: "";
+	transition: all 200ms ease-in;
+}
+
+.header-top__show-more-line::before {
+	background-color: var(--orange);
+	position: absolute;
+	top: -0.8rem;
+}
+
+.header-top__show-more-line::after {
+	background-color: var(--orange);
+	position: absolute;
+	top: 0.8rem;
+}
+
+.header-top__show-more--open .header-top__show-more-line {
+	background-color: transparent;
+}
+
+.header-top__show-more--open .header-top__show-more-line::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+
+.header-top__show-more--open .header-top__show-more-line::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+/*
+
+===================
+?  Header Content
+===================
+
+*/
+
+.header-content {
+	color: var(--white);
+}
+
+.header-content__wrapper {
+	margin: 6rem auto 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	max-width: 35rem;
+}
+
+.header-content__title-wrapper {
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	gap: 3rem;
+}
+
+.header-content__title {
+	font-family: var(--secondary-font);
+	font-size: 5rem;
+	line-height: 1.2;
+}
+
+.header-content__desc {
+	font-size: 1.8rem;
+}
+
+.header-content__btn {
+	background-color: var(--orange);
+}
+
+/*
+
+?  -- Main -- 
+
+*/
+
+.main {
+	padding: 4rem 0;
+}
+
+/*
+
+==================
+?    Services 
+==================
+
+*/
+
+.services {
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: wrap;
+	gap: 2rem;
+	margin: -20rem 0 0;
+}
+
+.service {
+	height: 26rem;
+	width: 30rem;
+	text-align: center;
+	color: var(--dark);
+	background-color: var(--white);
+	border-radius: 2rem;
+	flex: auto;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+}
+.service__img {
+	object-fit: contain;
+}
+.service__title {
+	margin: 1.5rem 0 0.8rem;
+	font-size: 1.8rem;
+	font-family: var(--secondary-font);
+}
+.service__caption {
+}
+
+/*
+
+======================
+?    Destinations 
+======================
+
+*/
+
+.destinations {
+	padding: 6rem 0;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.destinations__bg-shape {
+	position: absolute;
+	z-index: -1;
+}
+
+.destinations__bg-shape--top-right {
+	top: 0;
+	right: -20%;
+}
+
+.destinations__bg-shape--bottom-left {
+	left: -20%;
+	bottom: 15%;
+}
+
+.destinations__info {
+}
+
+.destinations__logo {
+	width: 8rem;
+	height: 8rem;
+}
+
+.destinations__title {
+	font-family: var(--secondary-font);
+	font-size: 3rem;
+	max-width: 36rem;
+	color: var(--dark);
+	margin: 3rem auto;
+}
+
+.destinations__btn {
+	margin-top: 3rem;
+	background-color: transparent;
+	color: var(--orange);
+	border: 1px solid var(--orange);
+	transition: all 100ms ease-in 50ms;
+}
+
+.destinations__btn:hover {
+	background-color: var(--orange);
+	color: var(--app-bg);
+}
+
+.places-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	margin: -1rem;
+}
+
+/*
+
+=============
+?   Place 
+=============
+
+*/
+
+.place {
+	margin: 1rem;
+	width: 30rem;
+	background-color: var(--white);
+	border-radius: 2rem;
+	padding: 2rem;
+	flex: auto;
+	color: var(--dark);
+	overflow: hidden;
+}
+
+.place__banner {
+	width: 100%;
+	height: 18rem;
+	position: relative;
+	border-radius: 2rem;
+	overflow: hidden;
+}
+.place__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.place__price {
+	bottom: -0.8rem;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 12rem;
+	padding: 0.5rem 2rem;
+	position: absolute;
+	background-color: var(--white);
+	border-radius: 1rem;
+	font-family: var(--primary-font-md);
+	color: var(--orange);
+}
+.place__like-wrapper {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	background-color: var(--white);
+	border-radius: 1.5rem;
+	height: 4rem;
+	width: 4rem;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.place__like {
+	width: 100%;
+	height: 100%;
+	margin-top: -0.25rem;
+	stroke: var(--orange);
+	stroke-width: 0.15rem;
+	fill: var(--white);
+	transition: all 150ms ease-in;
+	overflow: visible;
+}
+
+.place__like--fill {
+	fill: #e76f51;
+}
+
+.place__title {
+	margin: 3rem 0 0.5rem;
+	font-size: 1.8rem;
+	font-family: var(--secondary-font);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.place__caption {
+	margin-bottom: 3rem;
+}
+.place__btn {
+	color: #8d8d8d;
+	background-color: rgba(141, 141, 141, 0.1);
+}

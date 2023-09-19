@@ -2,14 +2,16 @@
 	.header-content__title {
 		font-size: 4rem;
 	}
-	
+
 	.destinations__title {
 		font-size: 2.4rem;
 	}
 }
 
-
 @media (min-width: 576px) {
+	.newspaper__email {
+		width: 100%;
+	}
 }
 
 @media (min-width: 768px) {
@@ -35,13 +37,33 @@
 	.header-content__wrapper {
 		max-width: 50rem;
 	}
+
+	.newspaper {
+		flex-flow: row-reverse wrap;
+		justify-content: space-between;
+		padding: 7rem;
+	}
+	
+		.newspaper__shape {
+			left: -10%;
+			max-width: 70%;
+		}
+
+	.newspaper__info {
+		flex: 1 0;
+		text-align: left;
+		max-width: 50rem;
+	}
+
+	.newspaper__img {
+		max-width: 40rem;
+	}
 }
 
 @media (min-width: 1200px) {
 	.nav__links {
 		gap: 3.5rem;
 	}
-
 }
 
 @media (min-width: 1400px) {

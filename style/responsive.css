@@ -1,69 +1,76 @@
 @media (max-width: 380px) {
-	.header-content__title {
-		font-size: 4rem;
-	}
+    .header-content__title {
+        font-size: 4rem;
+    }
 
-	.destinations__title {
-		font-size: 2.4rem;
-	}
+    .destinations__title {
+        font-size: 2.4rem;
+    }
 }
 
 @media (min-width: 576px) {
-	.newspaper__email {
-		width: 100%;
-	}
+    .newspaper__email {
+        width: 100%;
+    }
+
+    .newspaper__title {
+        margin: 0;
+    }
 }
 
 @media (min-width: 768px) {
-	.mobile-nav,
-	.header-top__show-more {
-		display: none;
-	}
+    .mobile-nav,
+    .header-top__show-more {
+        display: none;
+    }
 
-	.nav {
-		display: flex;
-	}
+    .nav {
+        display: flex;
+    }
 }
 
 @media (min-width: 992px) {
-	.header-top__wrapper {
-		gap: 4rem;
-	}
+    .header-top__wrapper {
+        gap: 4rem;
+    }
 
-	.nav__login-btns {
-		display: flex;
-	}
+    .nav__login-btns {
+        display: flex;
+    }
 
-	.header-content__wrapper {
-		max-width: 50rem;
-	}
+    .header-content__wrapper {
+        max-width: 50rem;
+    }
 
-	.newspaper {
-		flex-flow: row-reverse wrap;
-		justify-content: space-between;
-		padding: 7rem;
-	}
-	
-		.newspaper__shape {
-			left: -10%;
-			max-width: 70%;
-		}
+    .newspaper {
+        flex-flow: row-reverse wrap;
+        justify-content: space-between;
+        padding: 7rem;
+    }
 
-	.newspaper__info {
-		flex: 1 0;
-		text-align: left;
-		max-width: 50rem;
-	}
+    .newspaper__shape {
+        left: -20%;
+        max-width: 70%;
+    }
 
-	.newspaper__img {
-		max-width: 40rem;
-	}
+    .newspaper__info {
+        text-align: left;
+        max-width: 50rem;
+    }
+
+    .newspaper__img {
+        max-width: 40rem;
+    }
+
+    .newspaper__title {
+        max-width: none;
+    }
 }
 
 @media (min-width: 1200px) {
-	.nav__links {
-		gap: 3.5rem;
-	}
+    .nav__links {
+        gap: 3.5rem;
+    }
 }
 
 @media (min-width: 1400px) {

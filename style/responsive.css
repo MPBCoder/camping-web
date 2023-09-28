@@ -91,6 +91,10 @@
         max-width: 42rem;
     }
 
+    .footer__wrapper {
+        flex-flow: row wrap;
+    }
+
     .footer__nav {
         width: max-content;
     }

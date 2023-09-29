@@ -51,7 +51,7 @@
     }
 
     .footer__btn {
-        left: calc(100% - 5rem);
+        left: calc(100% - 6.5rem);
     }
 }
 
@@ -95,8 +95,16 @@
         flex-flow: row wrap;
     }
 
+    .footer__content {
+        margin-bottom: 0;
+    }
+
     .footer__nav {
-        width: max-content;
+        width: 50rem;
+    }
+
+    .footer__nav-item {
+        max-width: 18rem;
     }
 
     .footer__caption {

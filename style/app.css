@@ -769,9 +769,10 @@ a {
 
 .footer__wrapper {
     display: flex;
-    flex-flow: row-reverse wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .footer__btn {
@@ -799,7 +800,6 @@ a {
 
 */
 .footer__content {
-    margin-bottom: 4rem;
 }
 
 .footer__title {
@@ -850,6 +850,7 @@ a {
 
 .footer__nav-item {
     margin: 0.5rem;
+    width: 16rem;
 }
 
 .footer__nav-title {

@@ -23,6 +23,10 @@
     .footer__nav-item {
         width: 100%;
     }
+
+    .footer__apps {
+        justify-content: center;
+    }
 }
 
 @media (min-width: 576px) {
@@ -47,8 +51,10 @@
     }
 
     .newspaper__shape {
-        left: -20%;
-        max-width: 70%;
+        left: -20rem;
+        width: 80%;
+        object-fit: cover;
+        top: -5rem;
     }
 
     .newspaper__info {
@@ -111,9 +117,17 @@
     .footer__nav-item {
         margin: 1rem;
     }
+
+    .newspaper__shape {
+        top: -10rem;
+        left: -30rem;
+    }
 }
 
 @media (min-width: 1200px) {
+    .header {
+        min-height: 80rem;
+    }
     .nav__links {
         gap: 3.5rem;
     }
@@ -134,6 +148,10 @@
     .footer__caption {
         width: 55rem;
     }
+
+    .newspaper__shape {
+        left: -18rem;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -143,5 +161,10 @@
 
     .footer__caption {
         max-width: 60rem;
+    }
+
+    .newspaper__shape {
+        left: -15rem;
+        width: 70%;
     }
 }

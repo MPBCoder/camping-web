@@ -492,6 +492,8 @@ a {
 }
 .service__img {
     object-fit: contain;
+    width: 8rem;
+    height: 8rem;
 }
 .service__title {
     margin: 1.5rem 0 0.8rem;
@@ -727,6 +729,8 @@ a {
 
 .newspaper__email-icon {
     flex: none;
+    width: 2.5rem;
+    overflow: visible;
 }
 .newspaper__email {
     border: none;
@@ -753,6 +757,8 @@ a {
     cursor: pointer;
 }
 .newspaper__send-icon {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .newspaper__img {
     position: relative;
